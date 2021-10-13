@@ -1,0 +1,188 @@
+:root{
+    --main-height: 45px;
+    --main-bg: #00474b;
+}
+/* Start Global Rules */
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Space Mono';
+    background-color: #c5e4e7;
+    display: flex;
+    justify-content: center;
+}
+button, input{
+    font-family: 'Space Mono';
+}
+/* End Global Rules */
+
+/* Start Styling */
+/* Containers Style */
+.container{
+    background-color: #fff;
+    width: 900px;
+    border-radius: 25px;
+    
+    padding: 20px;
+    display: flex;
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.container > section{
+    display: block;
+    width: 100%;
+    min-height: 100%;
+    margin: 10px;
+    padding: 10px 30px;
+    border-radius: 25px;
+}
+
+.container > section:nth-child(2){/*right box*/
+    background-color: var(--main-bg);
+    margin-left: 20px;
+    position: relative;
+}
+
+/* Start Inputs Styling */
+label{
+    display: block;
+    font-weight: 700;
+    color: #627778;
+    margin-bottom: 10px;
+}
+
+.input{
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+input{
+    width: 100%;
+    min-height: var(--main-height);
+    border: none;
+    outline: none;
+    background-color: #f3f8fb;
+    border-radius: 5px;
+    position: relative;
+
+    color: #396572;
+    font-weight: 700;
+    font-size: 20px;
+    text-align: right;
+    padding: 0 10px;
+
+    -moz-appearance: textfield;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    appearance: none;
+}
+input::placeholder{
+    color: #99b7b9;
+}
+.input img{
+    position: absolute;
+    height: 40%;
+    left: 15px;
+}
+/* End Inputs Styling */
+
+/* Start Tip Styling */
+.tip{
+    margin: 50px 0;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, auto);
+    grid-gap: 15px;
+}
+.grid div{
+    display: flex;
+    min-height: var(--main-height);
+    color: #fff;
+    font-size: 24px;
+    font-weight: 700;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+
+    background-color: var(--main-bg);
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.grid :last-child{
+    background-color: #f4f8fb;
+    color: #5b7874;
+}
+.grid input[type="checkbox"]{
+    display: none;
+}
+.grid input[type="checkbox"]:checked + div{
+    background-color: #26c2ad;
+    color: #fff;
+}
+/* End Tip Styling */
+
+/* Start Styling Results */
+.tip-amount,
+.total{
+    color: #6ea6a7;
+    font-size: 14px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 40px 10px;
+}
+.tip-amount .first::first-line,
+.total .first::first-line{
+    font-size: 16px;
+    color: #fff;
+}
+.tip-amount :last-child,
+.total :last-child{
+    color: #26c2ad;
+    position: absolute;
+    right: 0;
+    font-size: 40px;
+    font-weight: 700;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: 60%;
+    text-align: right;
+}
+
+/* styling reset button */
+.reset{
+    width: calc(100% - 60px); /* 60px = parent's padding-right + padding-left */
+    min-height: var(--main-height);
+    background-color: #26c2ad;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    position: absolute;
+    bottom: 40px;
+
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--main-bg);
+    cursor: pointer;
+    transition: 0.3s;
+}
+.reset:disabled{
+    background-color: #0d686d;
+    cursor: no-drop;
+}
+/* End Styling Results */
+/* End Styling */

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  
+  <title>Frontend Mentor | Tip calculator app</title>
+
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+
+  <!-- MoozIsMe style-->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center;}
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <!-- the left section -->
+    <section>
+      
+      <div class="bill">
+        <label>Bill</label>
+        <div class="input">
+          <input type="number" id="bill" placeholder="0">
+          <img src="images/icon-dollar.svg">
+        </div>
+      </div>
+
+      <div class="tip">
+        <label>Select Tip %</label>
+        <div class="grid">
+          <input type="checkbox" class="check" tip-value="5" checked>
+          <div>5%</div>
+          <input type="checkbox" class="check" tip-value="10">
+          <div>10%</div>
+          <input type="checkbox" class="check" tip-value="15">
+          <div>15%</div>
+          <input type="checkbox" class="check" tip-value="25">
+          <div>25%</div>
+          <input type="checkbox" class="check" tip-value="50">
+          <div>50%</div>
+          <input type="checkbox" class="check" tip-value="75">
+          <div>75%</div>
+        </div>
+      </div>
+
+      <div class="people">
+        <label>Number of People</label>
+        <div class="input">
+          <input type="number" id="people" placeholder="min: 1">
+          <img src="images/icon-person.svg">
+        </div>
+      </div>
+    </section>
+
+    <!-- the result section -->
+    <section>
+
+      <div class="tip-amount">
+        <span class="first">Tip Amount<br>/ person</span>
+        <span id="tip-count">&dollar;0.0</span>
+      </div>
+
+      <div class="total">
+        <span class="first">Total</span>
+        <span id="total-count">&dollar;0.0</span>
+      </div>
+
+      <button class="reset" id="reset" disabled>Reset</button>
+
+    </section>
+  </div>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://github.com/Mooz-Developer">Mooz-Developer</a>.
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
